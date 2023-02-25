@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/titleLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Login"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
+        />
+
+    <TextView
+        android:id="@+id/TextViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Welcome to SAPS 2.0"
+        android:layout_below="@id/titleLogin"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        />
+
+    <ImageView
+        android:layout_width="139dp"
+        android:layout_height="131dp"
+        android:layout_below="@id/TextViewWelcome"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/kpm" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please enter login details"
+        android:layout_above="@id/TextInputEmail"
+        android:layout_marginBottom="10dp"
+        />
+
+    <!--email-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputEmail"
+        android:layout_above="@id/TextInputPassword"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <EditText
+            android:id="@+id/EditTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--password-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputPassword"
+        app:passwordToggleEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+
+    <EditText
+        android:id="@+id/EditTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Password"
+        />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Forget Password-->
+    <TextView
+        android:id="@+id/TextViewForgetPassword"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TextInputPassword"
+        android:layout_gravity="end"
+        android:layout_marginTop="10dp"
+        android:text="Forget Password?"
+        android:textColor="#3F51B5" />
+    <!--Login Button-->
+    <Button
+        android:id="@+id/ButtonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_below="@id/TextViewForgetPassword"
+        android:layout_marginTop="10dp"
+        />
+
+    <!--I am a new user of SAPS 2.0-->
+    <TextView
+        android:id="@+id/TextViewNewUser"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ButtonLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/new_user"
+        android:textColor="#3F51B5" />
+
+
+</RelativeLayout>

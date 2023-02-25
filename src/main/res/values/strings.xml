@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SAPS</string>
+    <string name="new_user">I am a new user of SAPS 2.0. <b>Register New Account?</b></string>
+    <string name="exist_user">I am an existing user. <b>Back to Login</b></string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id = "@+id/drawerLayout"
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:id = "@+id/HomeTitle"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="50dp"
+        />
+
+    <ImageView
+        android:id="@+id/ImageHome"
+        android:layout_width="144dp"
+        android:layout_height="135dp"
+        android:layout_below="@id/HomeTitle"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/kpm" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "SISTEM ANALYSIS PEPERIKSAAN SEKOLAH 2.0"
+        android:id = "@+id/TextViewSAPS"
+        android:layout_below = "@id/ImageHome"
+        android:layout_centerHorizontal="true"
+        style = "@style/TextAppearance.MaterialComponents.Caption"
+        />
+
+    <FrameLayout
+        android:id="@+id/FrameAnnounce"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/TextViewSAPS"
+        android:layout_marginTop="10dp"
+        android:background="@color/blue">
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/TextViewAnnouce"
+            android:text="Announcement"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:text="This is the column which the announcement is commenced in the SAPS 2.0 system" />
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/FrameImportant"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/FrameAnnounce"
+        android:layout_marginTop="5dp"
+        android:background="@color/light_purple">
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/TextViewImportant"
+            android:text="Important Date"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:text="This is the column that show the important date of the result announcing " />
+
+
+    </FrameLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id = "@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/nav_header"
+        app:menu = "@menu/nav_menu"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>
